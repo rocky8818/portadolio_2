@@ -1,0 +1,33 @@
+---
+import Code from "../icons/Code.astro"
+
+const ProyectosArray = [
+    {
+        titulo: "GlobalApp",
+        descripcion: "Un gestor de proyectos que ayudará a que la empresa global integra tenga menos tiempos muertos en sus empleados. Teniendo a la mano todos los proyectos y tareas pendientes, sus empleados pueden retomar tareas sin necesidad de preguntar por ellas.",
+        img: "https://res.cloudinary.com/do144qmdb/image/upload/v1711944262/Portafolios/miduPortafolio/l73yjbqnlwy89n2nojsl.webp",
+        tags: ["React", "Next", "Firebase"],
+        claves: "Gestor, ERP, Organizador"
+    },
+    {
+        titulo: "Canvaland",
+        descripcion: "E-commerce de lienzos de la cultura pop o arte en general. Diseñado para recalcar lo artistico dentro de las posibilidades del desarrollo, la elaboración de un buen lienzo con la elección del diseño para todo tipo de gustos.",
+        img: "https://res.cloudinary.com/do144qmdb/image/upload/v1711944561/Portafolios/miduPortafolio/bswec9wak5p3lzck7tzf.webp",
+        tags: ["React", "Next", "Firebase"],
+        claves: "E-commerce, tienda en linea, shop"
+    },
+]
+---
+
+<section id="projects">
+    <h1 class="flex flex-row mb-10 text-5xl items-center gap-x-4 text-primary">
+        <Code class="size-10" /> Proyectos
+    </h1>
+    <div class="grid grid-cols-2 gap-4">
+        {ProyectosArray.map((proyecto) => (
+            <div style={{backgroundImage: `url(${proyecto.img})`}} class="h-72 w-96 bg-cover rounded-xl">
+                <p>{proyecto.claves}</p>
+            </div>
+        ))}
+    </div>
+</section>

@@ -1,30 +1,65 @@
 ---
+import Maletin from "../icons/Maletin.astro";
+
 const Puestos = [
     {
         titulo: "Desarrollador Web Junior",
         empresa: "TECSOM",
-        descripcion: "Programador de páginas y aplicaciones web bajo supervisión, acercamiento a front-end y back-end.",
-        prin_proyectos: ["Delibot", "MVB", "Xian"],
-        img: "img-cloudinary",
+        descripcion:
+            "Programador de páginas y aplicaciones web bajo supervisión, acercamiento a front-end y back-end. Arquitectura légacy. JavaScript, css, html, jQuery, etc.",
+        prin_proyectos: [
+            { titulo: "Delibot", href: "" },
+            { titulo: "MVB", href: "" },
+            { titulo: "Xian", href: "" },
+        ],
+        img: "https://res.cloudinary.com/do144qmdb/image/upload/v1711931973/Portafolios/miduPortafolio/ascq2wyhze19le4z0zqe.jpg",
     },
     {
         titulo: "Desarrollador Web",
         empresa: "Centro Integral De Diseño",
-        descripcion: "Programador de páginas y aplicaciones web bajo supervisión, acercamiento a front-end y back-end.",
-        prin_proyectos: ["Delibot", "MVB", "Xian"],
-        img: "img-cloudinary",
-    }
-]
+        descripcion:
+            "Programador de páginas y aplicaciones web bajo supervisión, acercamiento a front-end y back-end.",
+        prin_proyectos: [
+            { titulo: "CID Homepage", href: "" },
+            { titulo: "Cian", href: "" },
+            { titulo: "Ursa", href: "" },
+        ],
+        img: "https://res.cloudinary.com/do144qmdb/image/upload/v1711932067/Portafolios/miduPortafolio/xt4gzxtoy2f9rrvpdyxj.webp",
+    },
+];
 ---
 
-<section>
-    {Puestos.map((puesto) =>(
-        <div class="mb-44 p-10 border-primary border-2 rounded-xl text-primary ">
-            <h1 class="text-3xl font-semibold">{puesto.titulo}</h1>
-            <br />
-            <h2 class="text-xl">En {puesto.empresa}</h2>
-            <p>{puesto.descripcion}</p>
-        </div>
-        
-    ))}
+<section id="jobs">
+    <h1 class="flex flex-row mb-10 text-5xl items-center gap-x-4 text-primary">
+        <Maletin class="size-10" /> Empleos
+    </h1>
+    {
+        Puestos.map((puesto) => (
+            <article class="mb-20 text-primary border-[#c1c1c1] border- rounded-lg shadow-xl]">
+                <div class="p-6">
+                    <h1 class="text-2xl font-semibold">{puesto.titulo}</h1>
+                    <br />
+                    <h2 class="text-xl">En {puesto.empresa}</h2>
+                    <p class="mb-8 text-lg text-pretty">{puesto.descripcion}</p>
+
+                    <ul class="flex gap-x-4 mb-4">
+                        {puesto.prin_proyectos.map((proyecto) => (
+                            <li>
+                                <a
+                                    href=""
+                                    class="hover:text-secondary text-xl rounded-xl px-2 transition hover:scale-105 hover:bg-primary border-primary border-2 inline-block"
+                                >
+                                    {proyecto.titulo}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                <img src={puesto.img} alt="" class="rounded-md w-full" />
+            </article>
+        ))
+    }
 </section>
+
+<style></style>
