@@ -1,0 +1,30 @@
+---
+const Puestos = [
+    {
+        titulo: "Desarrollador Web Junior",
+        empresa: "TECSOM",
+        descripcion: "Programador de páginas y aplicaciones web bajo supervisión, acercamiento a front-end y back-end.",
+        prin_proyectos: ["Delibot", "MVB", "Xian"],
+        img: "img-cloudinary",
+    },
+    {
+        titulo: "Desarrollador Web",
+        empresa: "Centro Integral De Diseño",
+        descripcion: "Programador de páginas y aplicaciones web bajo supervisión, acercamiento a front-end y back-end.",
+        prin_proyectos: ["Delibot", "MVB", "Xian"],
+        img: "img-cloudinary",
+    }
+]
+---
+
+<section>
+    {Puestos.map((puesto) =>(
+        <div class="mb-44 p-10 border-primary border-2 rounded-xl text-primary ">
+            <h1 class="text-3xl font-semibold">{puesto.titulo}</h1>
+            <br />
+            <h2 class="text-xl">En {puesto.empresa}</h2>
+            <p>{puesto.descripcion}</p>
+        </div>
+        
+    ))}
+</section>

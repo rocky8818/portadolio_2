@@ -1,0 +1,44 @@
+---
+import Badge from "../atoms/Badge.astro";
+import Github from "../icons/Github.astro";
+import Instagram from "../icons/Instagram.astro";
+import Linkedin from "../icons/Linkedin.astro";
+---
+
+<section class="w-full lg:w-[740px] py-44 mx-auto text-primary">
+    <h1 class="text-5xl font-bold flex flex-row pb-10 gap-x-4">
+        Hey, Soy Ricardo <div class="flex justify-center items-center">
+            <Badge>Desarrollador Web</Badge>
+        </div>
+    </h1>
+    <h2 class="text-xl opacity-90">
+        +1 año de experiencia. Front End y Back End. Guadalajara, Jalisco.
+        Especializado en crear sitios web y aplicaciones para empresas.
+    </h2>
+    <ul class="flex flex-row flex-wrap justify-between pt-10">
+        <li>
+            <a
+                href=""
+                class="hover:text-secondary transition hover:scale-125 inline-block"
+            >
+                <span class="flex"> <Github /> /rocky8818 </span>
+            </a>
+        </li>
+        <li>
+            <a
+                href=""
+                class="hover:text-secondary transition hover:scale-125 inline-block"
+            >
+                <span class="flex"> <Instagram /> /rickyglz </span>
+            </a>
+        </li>
+        <li>
+            <a
+                href=""
+                class="hover:text-secondary transition hover:scale-125 inline-block"
+            >
+                <span class="flex"> <Linkedin /> /ricardo gonzalez </span>
+            </a>
+        </li>
+    </ul>
+</section>
