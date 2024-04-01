@@ -1,3 +1,8 @@
-<a href="" class="text-xl hover:text-secondary transition hover:scale-125 inline-block"
+---
+const props = {...Astro.props}
+---
+
+
+<a href={props.href} class="text-xl hover:text-secondary transition hover:scale-125 inline-block"
     ><slot /></a
 >
